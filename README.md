@@ -1,43 +1,25 @@
 ## Intro
 
-xbooxp is a multiboot transfer software designed with winXP/2000 in mind, but 
-should work in Win98/95. This program will NOT work in raw DOS mode.
+xbooxp is a multiboot transfer software designed with winXP/2000 in mind, but should work in Win98/95. This program will NOT work in raw DOS mode.
 
-Xboo cable is cheap and easy to build. Costs about $5 to build. Plus you can send 
-multiboot images of up to 256kB, and upload speed is fast. This program can send a 256kB
-multiboot image in about 8.1 - 8.5 seconds in my AMD 2100++ CPU. With the delay 
-setting, its a little slower.
+Xboo cable is cheap and easy to build. Costs about $5 to build. Plus you can send multiboot images of up to 256kB, and upload speed is fast. This program can send a 256kB multiboot image in about 8.1 - 8.5 seconds in my AMD 2100++ CPU. With the delay setting, its a little slower.
 
-Even though this program runs in DOS, it is made for WinXP/2000. Usage of batch files
-recommended. This program does not require other software like Userport to run, it's 
-pretty much independent. It has a kernel mode driver which allows it to access the parallel 
-port and the PC speaker(for timing), that unloads itself after exit. This is much safer 
-cause there will be no security holes in your PC.
+Even though this program runs in DOS, it is made for WinXP/2000. Usage of batch files recommended. This program does not require other software like Userport to run, it's pretty much independent. It has a kernel mode driver which allows it to access the parallel port and the PC speaker(for timing), that unloads itself after exit. This is much safer cause there will be no security holes in your PC.
 
-This program was created by me, Vishnu P. Nambiar as a contribution towards a community that has helped me a lot,
-with all the guides, emulators, and stuff.
+This program was created by me, Vishnu P. Nambiar as a contribution towards a community that has helped me a lot, with all the guides, emulators, and stuff.
 
-This ia an old project (from 2004, back when I was still in undergrad school), I uploaded this in Github and Google Code
-to get the code out there for hackers to play with it. I am no longer supporting this project.
+This ia an old project (from 2004, back when I was still in undergrad school), I uploaded this in Github and Google Code to get the code out there for hackers to play with it. I am no longer supporting this project.
 
 
 ## License
 
-xbooxp is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
+xbooxp is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-xbooxp is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
+xbooxp is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
-You should have received a copy of the GNU General Public License
-along with xbooxp.  If not, see <http://www.gnu.org/licenses/>.
+You should have received a copy of the GNU General Public License along with xbooxp.  If not, see <http://www.gnu.org/licenses/>.
 
-xbooxp makes use of io.dll, which is free, and available at
-http://www.geekhideout.com/iodll.shtml
+xbooxp makes use of io.dll, which is free, and available at http://www.geekhideout.com/iodll.shtml
 
 
 ## Usage
@@ -78,8 +60,6 @@ named matrix.mb without a valid header(too lazy to use GBAFIX), just put this li
 
 	xbooxp matrix.mb -278 -h -d2
 
-Simple as pie.
-
 
 ## FAQ
 
@@ -98,7 +78,7 @@ To build one, check the gbadev.org website. You only need to connect three wires
 
 4. I think your app is slowing my PC down, where's that damn driver? I want it out!
  - Relax, this is a kernel mode driver, it only runs when an app calls it. When the app exits, the driver is unloaded from RAM. Therefore your PC's ports are closed again. And only apps with the io.dll can call the driver, so even while the program is running, there will be no intrusions. So whatever is slowing your PC down, it isn't the driver.
- - If you wanna remove the driver, just look for io.sys in your windows\system32\drivers folder and remove it. But i wouldn't't bother.
+ - If you wanna remove the driver, just look for io.sys in your windows\system32\drivers folder and remove it.
 
 5. What on earth is BURST BOOT?
  - BURST BOOT is a system designed by Martin Korth that allows you to send a multiboot image REPLACING the old image that you have transfered PREVIOUSLY. So you need not RESET(turn off/on) the GBA, thus saving you time and hassle. To use this system:
