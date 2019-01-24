@@ -1,4 +1,4 @@
-============================| Intro |===============================
+## Intro
 
 xbooxp is a multiboot transfer software designed with winXP/2000 in mind, but 
 should work in Win98/95. This program will NOT work in raw DOS mode.
@@ -14,13 +14,14 @@ pretty much independent. It has a kernel mode driver which allows it to access t
 port and the PC speaker(for timing), that unloads itself after exit. This is much safer 
 cause there will be no security holes in your PC.
 
-This ia an old project, I uploaded this in Google Code to get the code out there for hackers
-to play with it. I am no longer supporting this project. This is because I dont use Windows
-anymore. Linux is so much better, in my humble opinion.
+This program was created by me, Vishnu P. Nambiar as a contribution towards a community that has helped me a lot,
+with all the guides, emulators, and stuff.
+
+This ia an old project (from 2004, back when I was still in undergrad school), I uploaded this in Github and Google Code
+to get the code out there for hackers to play with it. I am no longer supporting this project.
 
 
-
-============================| License |=============================
+## License
 
 xbooxp is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -39,7 +40,7 @@ xbooxp makes use of io.dll, which is free, and available at
 http://www.geekhideout.com/iodll.shtml
 
 
-============================| Usage |===============================
+## Usage
 
 Run.bat is a batch file included for your ease. Edit the file with notepad. To run xbooxp, double 
 click the file. To edit the file, right click and choose edit.
@@ -79,8 +80,7 @@ named matrix.mb without a valid header(too lazy to use GBAFIX), just put this li
 Simple as pie.
 
 
-
-==========================| FAQ |=============================
+## FAQ
 
 1. How to know your parallel port address?
 
@@ -155,21 +155,7 @@ just need to double click the batch file.
 However, if you wanna see a GUI version, tell me. I can developed one thats twisted-free  ;)
 
 
-
-=======================| Contact me |================================
-
-This program was created by me, Vishnu P. Nambiar aka ZeroX as a contribution towards
-a society that has helped me a lot, with all the guides, emulators, and stuff.
-
-Remember, before contacting me, make sure you have check the forum for your answers, or it
-is likely I might not answer, I've got a life. And yeah, NO SPAM...
-
-Contact me : ZeroX at GBAdev forum.
-             zero.vishnu {at} gmail dot com, i check this often.
-
-
-
-=======================| Need Help |======================================
+## Need Help?
 
 Contact me if you have info on:-
 1. Tips on intergrating BURST BOOT
@@ -179,14 +165,11 @@ Contact me if you have info on:-
 5. Advice on program interface.
 
 
+## Credits
 
-=======================| Credits |================================
+Thanks to:
+- Alexander aka arundel, for all his help and support. His gbacopy.asm was of GREAT help, but took a while to understand. His beta testing was also a great help. He's a great guy. Check out his gbacopy for Linux.
+- Matt, for his c code for CRC routines.
+- Martin Korth's extremely informative GBAtek document.
+- Fred's great io.dll from geekhideout.com. This driver was most useful for my university projects.
 
-Thanks to
-	  - Alexander aka arundel, for all his help and support. His gbacopy.asm was of GREAT
- 	    help, but took a while to understand. His beta testing was also a great help. He's
-        a great guy. Check out his gbacopy for Linux.
-	  - Matt, for his c code for CRC routines.
-	  - Martin Korth's extremely informative GBAtek document.
-	  - Fred's great io.dll from geekhideout.com. This driver was most useful for my 
-	    university projects.
