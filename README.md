@@ -84,76 +84,30 @@ Simple as pie.
 ## FAQ
 
 1. How to know your parallel port address?
-
-i.   Right click on my computer and chose properties. Then click on the Hardware tab, and 
-     choose Device Manager.
-
-ii.  Look for Ports(Com & LTP), and expand this branch. Then right click on printer port and 
-     choose properties.
-
-iii. Go to the Resources Tab, and look at the first IO-Range value, if 378-3FF that means you 
-     port is 0x378. This is the most common value.
-
+ - Right click on my computer and chose properties. Then click on the Hardware tab, and choose Device Manager.
+ - Look for Ports(Com & LTP), and expand this branch. Then right click on printer port and choose properties.
+ - Go to the Resources Tab, and look at the first IO-Range value, if 378-3FF that means you port is 0x378. This is the most common value.
 
 2. Whats a batch file?
-
-A batch file is a file with .bat extension. It is a set of CLI commands written in sequence.
-
-To get a better idea on how a batch file works, check out run.bat file included. You can 
-edit it using notepad. The @ECHO OFF command means that whatever typed will not be displayed 
-in the screen. To run the batch file, just double-click it.
-
-Why use a batch file? Cause everybody's is just too lazy to type out "xbooxp program.mb -278 -h" 
-EVERYTIME in CLI just to test their program, right?
-
+ - A batch file is a file with .bat extension. It is a set of CLI commands written in sequence. To get a better idea on how a batch file works, check out run.bat file included. You can edit it using notepad. The @ECHO OFF command means that whatever typed will not be displayed in the screen. To run the batch file, just double-click it.
 
 3. How do i build a xboo cable?
+ - It's REALLY EASY. No need to be an engineer. But making one will make others believe you are ;)
+To build one, check the gbadev.org website. You only need to connect three wires, four IF you want to use high speed BURST BOOT. You can still use BURST BOOT with only three wires, only transfer is a little slower.
+ - Check out the PERN project tutorial. It has a great coverage on the topic of building the cable. My salutations to the author. There are also several other guides available.
 
-It's REALLY EASY.
-No need to be an engineer. But making one will make others believe you are        ;)
-To build one, check the gbadev.org website. You only need to connect three wires, 
-four IF you want to use high speed BURST BOOT. You can still use BURST BOOT with only three 
-wires, only transfer is a little slower.
+4. I think your app is slowing my PC down, where's that damn driver? I want it out!
+ - Relax, this is a kernel mode driver, it only runs when an app calls it. When the app exits, the driver is unloaded from RAM. Therefore your PC's ports are closed again. And only apps with the io.dll can call the driver, so even while the program is running, there will be no intrusions. So whatever is slowing your PC down, it isn't the driver.
+ - If you wanna remove the driver, just look for io.sys in your windows\system32\drivers folder and remove it. But i wouldn't't bother.
 
-Check out the PERN project tutorial. It has a great coverage on the topic of building
-the cable. My salutations to the author. There are also several other guides available.
+5. What on earth is BURST BOOT?
+ - BURST BOOT is a system designed by Martin Korth that allows you to send a multiboot image REPLACING the old image that you have transfered PREVIOUSLY. So you need not RESET(turn off/on) the GBA, thus saving you time and hassle. To use this system:
+  - Put a burst boot code(like a backdoor, you know) in your code.
+  - Send your multiboot image. Once you've finished checking it out....
+  - Send your multiboot image again.....WITHOUT reseting the GBA.
 
-4. I think your app is slowing my PC down, where's that damn driver??!!! I want it out!!
-Plus some dude told me its dangerous to leave my ports open!!
-
-Relax, this is a kernel mode driver, it only runs when an app calls it. When the app
-exits, the driver is unloaded from RAM. Therefore your PC's ports are closed again. And 
-only apps with the io.dll can call the driver, so even while the program is running, there 
-will be no intrusions. So whatever is slowing your PC down, it isn't the driver.
-
-If you wanna remove the driver, just look for io.sys in your windows\system32\drivers folder
-and remove it. But i wouldn't't bother.
-
-
-5. What on earth is BURST BOOT? Another guy told me it's great! What IS so great about it?
-
-Okay this is a question asked too many times.......
-But the answer is simple. BURST BOOT is a system designed by Martin Korth that allows you to
-send a multiboot image REPLACING the old image that you have transfered PREVIOUSLY. To use this
-system:-
-
-i.   Put a burst boot code(like a backdoor, you know) in your code.
-ii.  Send your multiboot image. Once you've finished checking it out....
-iii. Send your multiboot image again.....WITHOUT reseting the GBA.
-
-So, if youre smart, you should know that you need not RESET(turn off/on) the GBA, thus 
-saving you time and a lot of hassle. You can modify your code, then send it again, 
-and again.....
-
-
-7. Why is this program running in DOS??? I want Windows GUI?!!??! I'm sick of the
-twistedness of GBA dev tools!!!!!!!
-
-A CLI program has the advantage of being used with batch files easily without much hassle.
-Therefore a programmer who wants to test his program just after he has compiled his code 
-just need to double click the batch file.
-
-However, if you wanna see a GUI version, tell me. I can developed one thats twisted-free  ;)
+6. Why is this program running in DOS? I'm sick of the twistedness of GBA dev tools!
+- A CLI program has the advantage of being used with batch files easily without much hassle. Therefore a programmer who wants to test his program just after he has compiled his code just need to double click the batch file. However, if you wanna see a GUI version, just tell me.
 
 
 ## Need Help?
@@ -173,4 +127,3 @@ Thanks to:
 - Matt, for his c code for CRC routines.
 - Martin Korth's extremely informative GBAtek document.
 - Fred's great io.dll from geekhideout.com. This driver was most useful for my university projects.
-
