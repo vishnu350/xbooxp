@@ -2,7 +2,7 @@
 
 xbooxp is a multiboot transfer software designed with winXP/2000 in mind, but should work in Win98/95. This program will NOT work in raw DOS mode.
 
-Xboo cable is cheap and easy to build. Costs about $5 to build. Plus you can send multiboot images of up to 256kB, and upload speed is fast. This program can send a 256kB multiboot image in about 8.1 - 8.5 seconds in my AMD 2100++ CPU. With the delay setting, its a little slower.
+Xboo cables are cheap and easy to build, costing about $5. Plus you can send multiboot images of up to 256kB, and upload speed is fast. This program can send a 256kB multiboot image in about 8.1 - 8.5 seconds in my AMD 2100++ CPU. With the delay setting, its a little slower.
 
 Even though this program runs in DOS, it is made for WinXP/2000. Usage of batch files recommended. This program does not require other software like Userport to run, it's pretty much independent. It has a kernel mode driver which allows it to access the parallel port and the PC speaker(for timing), that unloads itself after exit. This is much safer cause there will be no security holes in your PC.
 

@@ -1,0 +1,142 @@
+#### Building the XBOO cable
+
+Below describes how to connect a PC parallel port to the GBA link port,
+allowing to upload small programs (max 256 KBytes). It was modified from
+Martin Koth's description for building the xboo cable, and included here
+as it is very difficult to find information on it now.
+
+This is possible because the GBA BIOS includes a built-in function for
+downloading & executing program code even when no cartridge is inserted.
+The program is loaded to 2000000h and up in GBA memory, and must contain
+cartridge header information (nintendo logo, checksum, etc) just as for
+normal ROM cartridges.
+
+
+## Basic Cable Connection
+
+The general connection is very simple (only needs four wires), the only
+problem is that you need a special GBA plug or otherwise need to solder
+wires directly to the GBA mainboard (see Examples below).
+  GBA  Name  Color                 SUBD CNTR Name
+  2    SO    Red     ------------- 10   10   /ACK
+  3    SI    Orange  ------------- 14   14   /AUTOLF
+  5    SC    Green   ------------- 1    1    /STROBE
+  6    GND   Blue    ------------- 19   19   GND
+Optionally, also connect the following signals (see notes below):
+  4    SD    Brown   ------------- 17   36   /SELECT  (double speed burst)
+  3    SI    Orange  ----[===]---- 2..9 2..9 D0..7    (pull-up, 560 Ohm)
+  5    SC    Green   ----[===]---- 2..9 2..9 D0..7    (pull-up, 560 Ohm)
+  4    SD    Brown   ----[===]---- 2..9 2..9 D0..7    (pull-up, 560 Ohm)
+  START  (mainboard) -----|>|----- 16   31   /INIT    (auto-reset, 1N4148)
+  SELECT (mainboard) -----|>|----- 16   31   /INIT    (auto-reset, 1N4148)
+  RESET  (mainboard) -----||------ 16   31   /INIT    (auto-reset, 300nF)
+Notes: The GBA Pins are arranged from left to right as 2,4,6 in upper
+row, and 1,3,5 in lower row; outside view of GBA socket; flat side of
+socket upside. The above "Colors" are as used in most or all standard
+Nintendo link cables, note that Red/Orange will be exchanged at one end
+in cables with crossed SO/SI lines. At the PC side, use the SUBD pin
+numbers when connecting to a 25-pin SUBD plug, or CNTR pin numbers for
+36-pin Centronics plug.
+
+
+## Optional SD Connection (Double Speed Burst)
+
+The SD line is used for Double Speed Burst transfers only, in case that
+you are using a gameboy link plug for the connection, and if that plug
+does not have a SD-pin (as such from older 8bit gameboy cables), then
+you may leave out this connection. Burst Boot will then only work half
+as fast though.
+
+
+## Optional Pull-Ups (Improves Low-to-High Transition Speed)
+
+If your parallel port works only with medium or slow delay settings,
+try to connect 560 Ohm resistors to SI/SC/SD inputs each, and the other
+resistor pin to any or all of the parallel port data lines (usually
+outputs high to pins 2..9).
+
+
+## Optional Reset Connection (CAUTION: Connection changed September 2004)
+
+The Reset connection allows to automatically reset & upload data even
+if a program in the GBA has locked up (or if you've loaded a program
+that does not support special burst boot), without having to reset the
+GBA manually by switching it off and on (and without having to press
+Start+Select if a cartridge is inserted).
+The two diodes should be 1N4148 or similiar, the capacitor should be
+300nF (eg. three 100nF capacitors in parallel). The signals are labeled
+on the mainboard, and can be found at following names / pin numbers:
+RESET/CPU.125, SELECT/TP2/CPU.126, START/TP3/CPU.127.
+
+
+## Optional Power Supply Connection
+
+Also, you may want to connect the power supply to parallel port data
+lines. Different parallel ports output different voltages/amperes
+though, maybe using a large Z-diode could be used to get a stable
+voltage with most ports. Even with strong ports, it'll probably not
+work when inserting a very power-hungry cartridge into the GBA.
+
+
+## Transmission Speed
+
+The first transfer will be very slow, and the GBA BIOS will display
+the boot logo for at least 4 seconds, even if the transfer has
+completed in less time. Once when you have uploaded a program with
+burst boot backdoor, further transfers will be ways faster. The
+table below shows transfer times for 0KByte - 256KByte files:
+  Boot Mode_____Delay 0_______Delay 1_______Delay 2_____
+  Double Burst  0.1s - 1.8s   0.1s - 3.7s   0.1s - 5.3s
+  Single Burst  0.1s - 3.6s   0.1s - 7.1s   0.1s - 10.6s
+  Normal Bios   4.0s - 9.0s   4.0s - 12.7s  4.0s - 16.3s
+All timings measured on a 66MHz computer, best possible transmission
+speed should be 150KBytes/second. Timings might slightly vary
+depending on the CPU speed and/or operating system. Synchronization
+is done by I/O waitstates, that should work even on faster computers.
+Non-zero delays are eventually required for cables without pull-ups.
+
+
+## Requirements
+
+Beside for the cable and plugs, no special requirements.
+The cable should work with all parallel ports, including old-fashined
+uni-directional printer ports, as well as modern bi-directional EPP
+ports. Transfer timings should work stable regardless of the PCs CPU
+speed (see above though), and regardless of multitasking interruptions.
+
+Windows NT/2K/XP/etc do not allow executables to access the parallel
+port directly - unless having installed a special driver that unlocks
+access to the port.
+Note: DOS and Windows 95/98/etc. are working fine without such drivers.
+
+## Connection Examples
+
+As far as I can imagine, there are four possible methods how to connect
+the cable to the GBA. The first two methods don't require to open the
+GBA, and the other methods also allow to connect optional power supply
+and reset signal.
+  1) Connect it to the GBA link port. Advantage: No need to
+     open/modify the GBA. Disadvantage: You need a special plug,
+     (typically gained by removing it from a gameboy link cable).
+  2) Solder the cable directly to the GBA link port pins. Advantages:
+     No plug required & no need to open the GBA. Disadvantages:
+     You can't remove the cable, and the link port becomes unusable.
+  3) Solder the cable directly to the GBA mainboard. Advantage: No
+     plug required at the GBA side. Disadvantage: You'll always
+     have a cable leaping out of the GBA even when not using it,
+     unless you put a small standard plug between GBA and cable.
+  4) Install a Centronics socket in the GBA (between power switch
+     and headphone socket). Advantage: You can use a standard
+     printer cable. Disadvantages: You need to cut a big hole into
+     the GBAs battery box (which cannot be used anymore), the big
+     cable might be a bit uncomfortable when holding the GBA.
+Personally, I've decided to use the lastmost method as I don't like
+ending up with hundreds of special cables for different purposes, and
+asides, it's been fun to damage the GAB as much as possible.
+
+Note:
+The above used PC parallel port signals are typically using 5V=HIGH
+while GBA link ports deal with 3V=HIGH. From my experiences, the
+different voltages do not cause communication problems (and do not
+damage the GBA and/or PC hardware), and after all real men don't care
+about a handful of volts, however, use at own risk.
