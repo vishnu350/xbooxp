@@ -6,9 +6,9 @@ Xboo cable is cheap and easy to build. Costs about $5 to build. Plus you can sen
 
 Even though this program runs in DOS, it is made for WinXP/2000. Usage of batch files recommended. This program does not require other software like Userport to run, it's pretty much independent. It has a kernel mode driver which allows it to access the parallel port and the PC speaker(for timing), that unloads itself after exit. This is much safer cause there will be no security holes in your PC.
 
-This program was created by me, Vishnu P. Nambiar as a contribution towards a community that has helped me a lot, with all the guides, emulators, and stuff.
+This program was created by me a contribution towards a community that has helped me a lot, with all the guides, emulators, and stuff.
 
-This ia an old project (from 2004, back when I was still in undergrad school), I uploaded this in Github and Google Code to get the code out there for hackers to play with it. I am no longer supporting this project.
+This ia an old project from 2004, back when I was still in undergrad school. I uploaded this in Github and Google Code to get the code out there for hackers to play with it. I am no longer supporting this project, and all code is provided AS IS.
 
 
 ## License
