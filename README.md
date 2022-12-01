@@ -54,7 +54,7 @@ So, if your parellel port address is 0x278, you want delay=2, and you want to up
  - To build one, check the [xboo cable documentation](https://github.com/vishnu350/xbooxp/blob/master/xboo_cable_info.txt). You only need to connect three wires, four IF you want to use high speed BURST BOOT. You can still use BURST BOOT with only three wires, only transfer is a little slower.
  - Check out the PERN project tutorial. It has a good coverage on the topic of building the xboo cable.
 
-5. What is BURST BOOT?
+3. What is BURST BOOT?
  - BURST BOOT is a system designed by Martin Korth that allows you to send a multiboot image to replace the old image that you have transfered previously. So you dont need to RESET (turn off/on) the GBA, thus saving you time and hassle. To use this system:
   - Put a burst boot code(like a backdoor, you know) in your code.
   - Send your multiboot image.
