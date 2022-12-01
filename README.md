@@ -63,13 +63,14 @@ So, if your parellel port address is 0x278, you want delay=2, and you want to up
 
 ## License
 
-xbooxp is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+xbooxp is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
 
 xbooxp is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with xbooxp.  If not, see <http://www.gnu.org/licenses/>.
 
 For Linux, xbooxp works out of the box with the usual permission tweaks.
+
 For Windows, xbooxp makes use of io.dll, which is free, and available at http://www.geekhideout.com/iodll.shtml. However, this is now no longer supported.
 
 
@@ -80,4 +81,4 @@ Thanks to:
 - Alexander aka arundel, for all his help and support. His gbacopy.asm was of GREAT help, but took a while to understand. His beta testing was also a great help. Check out his gbacopy for Linux.
 - Matt, for his C code for CRC routines.
 - Martin Korth's extremely informative GBAtek document.
-- Fred's great io.dll from geekhideout.com.
+- Fred's io.dll from geekhideout.com.
