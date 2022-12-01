@@ -10,7 +10,8 @@ This program was created as a contribution towards a community that has helped m
 ## Building from source
 
 For Linux, just clone the directory and type **make**. The xbooxp binary will be built.
-For Windows, the original code was built using Borland C/C++ compilers, and is no longer supported. However, since the code is very portable, it may still build on modern systems.
+
+For Windows, the original code was built using Borland C/C++ compilers, and is no longer supported. However, since the code is very portable, it may still build on modern systems. The binaries are still included in the legacy directory.
 
 
 ## Usage
