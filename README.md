@@ -21,21 +21,19 @@ Here is what you should see upon running the xbooxp command:<br>
 
 The arguments:
 
-			-h		use this to upload multiboot file without a valid
+			-h		Use this to upload multiboot file without a valid
 					header. This does not affect or modify the file.
 
 			-d[value]	To increase the delay value, use this. Example,
-						if i want to use delay=1, then type -d1.
-						Use this only if you have a lot of problems.
+					if you want to use delay=1, then type -d1.
+					Use this only if you are having problems.
 
 			-p[port]	Set the port address here. If your port address
-						is 0x278, then type -p278. If no value specified
-						then 0x378 will be used as default.
+					is 0x278, then type -p278. If no value specified
+					then 0x378 will be used as default.
 
 			-t		Set for testing purposes. This will allow you to 
-					send files without actually starting them. The
-					file will be sent, but wont start. Only for
-					testing purposes.
+					send files without actually starting them.
 
 
 To see the help screen, just type xbooxp, and you will see the above message (or similar).
