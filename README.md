@@ -38,7 +38,7 @@ The arguments:
 
 To see the help screen, just type xbooxp, and you will see the above message (or similar).
 
-So, if your parellel port address is 0x278, you want delay=2, and you want to upload a multiboot file named matrix.mb without a valid header, do:<br>
+So, if your parallel port address is 0x278, you want delay=2, and you want to upload a multiboot file named matrix.mb without a valid header, do:<br>
 `./xbooxp matrix.mb -278 -h -d2`
 
 
