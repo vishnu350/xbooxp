@@ -54,11 +54,7 @@ int main(int count,char **arg)
 	unsigned char c;
 	short temp[5];
 
-#if defined(_WIN32) || defined(_WIN64)
-	printf ("\nxbooxp v1.2, GBA multiboot transfer software designed for Windows XP/2000.\nCopyright 2005 by Vishnu.\n\n");
-#elif defined(__linux__)
-	printf ("\nxbooxp v1.2, GBA multiboot transfer software for Linux.\nCopyright 2005 by Vishnu.\n\n");
-#endif
+	printf ("xbooxp v1.3 - GBA multiboot transfer software.\nCopyright (C) 2025 Vishnu. License: GNU GPL v2 <https://gnu.org/licenses/gpl.html>.\n\n");
 	if (count<2 || count>6)
 	{
 		Usage(arg[0]);
