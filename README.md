@@ -18,9 +18,9 @@ Modern PCs no longer have parallel ports (DB25), but you can still use a USB to 
 - USB To DB25 (Female): https://www.aliexpress.com/item/1005005425690098.html
 - GBA Link Connect Cable: https://www.aliexpress.com/item/1005006982954065.html
 
-To build one, pay carefull attention to the wiring info in the [xboo cable documentation](https://github.com/vishnu350/xbooxp/blob/master/xboo_cable_info.txt). You only need to connect three wires, four if you want to use high speed BURST BOOT mode. You can still use BURST BOOT with only three wires, but transfer speeds will be a little slower.
+To build one, just adapt the wiring info provided in the [xboo cable documentation](https://github.com/vishnu350/xbooxp/blob/master/xboo_cable_info.txt) to work with your USB adapter. You only need to connect three wires, four if you want to use high speed BURST BOOT mode. You can still use BURST BOOT with only three wires, but transfer speeds will be a little slower.
 
-BURST BOOT is a system designed by Martin Korth that allows you to send a multiboot image to replace the old image that you have transfered previously. So you will not need to keep resetting the GBA (turn off/on), saving time. To use this system:
+BURST BOOT is a system designed by Martin Korth that allows you to send a multiboot image to replace the old image that you have transferred previously. So you will not need to keep resetting the GBA (turn off/on), saving time. To use this system:
 - Add burst boot code in your program.
 - Send your multiboot image.
 - Once you are done checking it out, send your multiboot image again. Simple as that.
