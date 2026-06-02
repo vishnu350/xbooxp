@@ -32,6 +32,7 @@ For Linux, just clone the git repo and type **make**, and the executable binary 
 
 For Windows, builds are no longer supported. The original builds were compiled using Borland C/C++ compilers (now outdated). However, since the source code is very portable, it may still build on modern Windows systems. The original binaries are still included in the *legacy* directory, and will require the use of io.dll (provided by [geekhideout](http://www.geekhideout.com/iodll.shtml)).
 
+
 ## Usage
 
 Here is what you should see upon running the xbooxp command:<br>
@@ -56,7 +57,7 @@ The arguments:
 
 To see the help screen, just type xbooxp, and you will see the above message (or similar).
 
-Eg. to run xbooxp with the following options - parallel port address is 0x278, delay=2, and you want to upload a multiboot file named matrix.mb without a valid header, do:<br>
+Eg. to run xbooxp with parallel port address 0x278, delay 2, and you want to upload a multiboot file named matrix.mb without a valid header, do:<br>
 `./xbooxp matrix.mb -278 -h -d2`
 
 
@@ -73,7 +74,7 @@ You should have received a copy of the GNU General Public License along with xbo
 
 Thanks to:
 - Jacques Pelletier, for updating this program to make it work in Linux.
-- Alexander aka arundel, for all his help and support. His gbacopy.asm was of GREAT help, but took a while to understand. His beta testing was also a great help. Check out his gbacopy for Linux.
+- Alexander aka arundel, for all his help and support. His gbacopy.asm was of GREAT help, but took a while to understand. He also helped with beta testing. Check out his gbacopy for Linux.
 - Matt, for his C code for CRC routines.
 - Martin Korth's extremely informative GBAtek document.
 - Fred's io.dll from geekhideout.com.
