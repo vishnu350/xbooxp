@@ -28,10 +28,9 @@ BURST BOOT is a system designed by Martin Korth that allows you to send a multib
 
 ## Compiling xbooxp from source
 
-For Linux, just clone the directory and type **make**, and the executable binary will be built.
+For Linux, just clone the git repo and type **make**, and the executable binary will be built. It works out of the box with the usual permission tweaks.
 
-For Windows, the original code was built using Borland C/C++ compilers, and is no longer supported. However, since the code is very portable, it may still build on modern systems. The binaries are still included in the legacy directory.
-
+For Windows, builds are no longer supported. The original builds were compiled using Borland C/C++ compilers (now outdated). However, since the source code is very portable, it may still build on modern Windows systems. The original binaries are still included in the *legacy* directory, and will require the use of io.dll (provided by [geekhideout](http://www.geekhideout.com/iodll.shtml)).
 
 ## Usage
 
@@ -57,7 +56,7 @@ The arguments:
 
 To see the help screen, just type xbooxp, and you will see the above message (or similar).
 
-So, if your parallel port address is 0x278, you want delay=2, and you want to upload a multiboot file named matrix.mb without a valid header, do:<br>
+Eg. to run xbooxp with the following options - parallel port address is 0x278, delay=2, and you want to upload a multiboot file named matrix.mb without a valid header, do:<br>
 `./xbooxp matrix.mb -278 -h -d2`
 
 
@@ -68,10 +67,6 @@ xbooxp is free software: you can redistribute it and/or modify it under the term
 xbooxp is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with xbooxp.  If not, see <http://www.gnu.org/licenses/>.
-
-For Linux, xbooxp works out of the box with the usual permission tweaks.
-
-For Windows, xbooxp makes use of io.dll, which is free, and available at http://www.geekhideout.com/iodll.shtml. However, this is now no longer supported.
 
 
 ## Credits
