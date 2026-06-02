@@ -28,7 +28,11 @@ BURST BOOT is a system designed by Martin Korth that allows you to send a multib
 
 ## Compiling xbooxp from source
 
-For Linux, just clone the git repo and type **make**, and the executable binary will be built. It works out of the box with the usual permission tweaks.
+For Linux, just clone this git repo and type **make**, and the executable binary will be built. It works out of the box with the usual permission tweaks:
+```
+git clone https://github.com/vishnu350/xbooxp
+cd xbooxp && make
+```
 
 For Windows, builds are no longer supported. The original builds were compiled using Borland C/C++ compilers (now outdated). However, since the source code is very portable, it may still build on modern Windows systems. The original binaries are still included in the *legacy* directory, and will require the use of io.dll (provided by [geekhideout](http://www.geekhideout.com/iodll.shtml)).
 
