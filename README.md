@@ -6,7 +6,7 @@
 
 Xbooxp is a multiboot transfer software originally designed with winXP/2000 in mind, but has since been updated to work in Linux/BSD/Solaris thanks to Jacques Pelletier.
 
-Xboo cables are cheap and easy to build. You can send multiboot images of up to 256kB, and upload speed is fast. This program can send a 256kB multiboot image in about 8.1 - 8.5 seconds. With the delay setting, its a little slower. It also supports BURST BOOT mode.
+The xboo cables were originally designed by [Martin Korth](https://problemkaputt.de), and they are cheap and easy to build. You can send multiboot images of up to 256kB, and upload speed is fast. This program can send a 256kB multiboot image in about 8.1 - 8.5 seconds. With the delay setting, its a little slower. It also supports BURST BOOT mode.
 
 This is an old project from 2004. I uploaded this to Github and Google Code to get the code out there for hackers to play with it. I no longer support this project.
 
@@ -78,7 +78,7 @@ You should have received a copy of the GNU General Public License along with xbo
 
 Thanks to:
 - Jacques Pelletier, for updating this program to make it work in Linux.
-- Alexander aka arundel, for all his help and support. His gbacopy.asm was of GREAT help, but took a while to understand. He also helped with beta testing. Check out his gbacopy for Linux.
+- Alexander aka arundel, for all his help and support. His gbacopy.asm was of great help, but took a while to understand. He also helped with beta testing. Check out his gbacopy for Linux.
 - Matt, for his C code for CRC routines.
-- Martin Korth's extremely informative GBAtek document.
-- Fred's io.dll from geekhideout.com.
+- [Martin Korth](https://www.problemkaputt.de/gbatek-gba-reference.htm)'s extremely informative GBAtek document.
+- Fred's io.dll from [geekhideout](http://www.geekhideout.com/iodll.shtml).
