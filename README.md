@@ -8,7 +8,7 @@ Xbooxp is a multiboot transfer software originally designed with winXP/2000 in m
 
 The xboo cables were originally designed by [Martin Korth](https://problemkaputt.de), and they are cheap and easy to build. You can send multiboot images of up to 256kB, and upload speed is fast. This program can send a 256kB multiboot image in about 8.1 - 8.5 seconds. With the delay setting, its a little slower. It also supports BURST BOOT mode.
 
-This is an old project from 2004. I uploaded this to Github and Google Code to get the code out there for hackers to play with it. I no longer support this project.
+This is an old project from 2004. I uploaded this to Github and Google Code to get the code out there for hackers to play with it. I no longer support this project due to lack of functioning hardware, but maintenance PRs are still welcome.
 
 ## Building the xboo cable hardware
 
